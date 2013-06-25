@@ -28,6 +28,9 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
 @property (weak, nonatomic) IBOutlet UIButton *save;
+@property (weak, nonatomic) IBOutlet UILabel *labeltitle;
+@property (weak, nonatomic) IBOutlet UILabel *labeldescription;
+@property (weak, nonatomic) IBOutlet UILabel *labelswitch;
 
 -(IBAction)responseToggled:(id)sender;
 

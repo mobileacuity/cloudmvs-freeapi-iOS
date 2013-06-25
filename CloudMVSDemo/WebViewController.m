@@ -27,12 +27,13 @@
 }
 
 @property (strong,nonatomic) UIAlertView *downloading;
-@property (strong,nonatomic)UIAlertView *failed;
+@property (strong,nonatomic) UIAlertView *failed;
+
 
 @end
 
 @implementation WebViewController
-@synthesize webview,downloading,failed,request;
+@synthesize webview,downloading,failed,request,open,done;
 
 #pragma mark - view lifecycle
 
@@ -40,7 +41,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    //set up the appropriate initial request
+    // set up the appropriate initial request
+    
+    done.title = NSLocalizedString(@"DONE", nil);
+    open.title = NSLocalizedString(@"OPENINSAFARI", nil);
+    
     [webview loadRequest:request];
     if(downloading==nil)[self promptWaitForResponse];
     completedLoad = NO;
@@ -93,6 +98,7 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     DLog(@"webViewdidFinishLoad");
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     completedLoad = YES;
     [self stopWaitForResponse];
@@ -113,7 +119,7 @@
         return;
     }
     
-    downloading = [[UIAlertView alloc] initWithTitle:nil message:@"Loading.." delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+    downloading = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"LOADING", nil) delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     [downloading show];
 }
 
@@ -122,7 +128,7 @@
     if (downloading!=nil) {
         return;
     }
-    failed = [[UIAlertView alloc] initWithTitle:nil message:@"Failed to reach website." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    failed = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"FAILED", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     [failed show];
 }
 
@@ -150,4 +156,10 @@
 }
 
 
+- (void)viewDidUnload {
+    [self setDone:nil];
+    [self setOpen:nil];
+    [self setDone:nil];
+    [super viewDidUnload];
+}
 @end

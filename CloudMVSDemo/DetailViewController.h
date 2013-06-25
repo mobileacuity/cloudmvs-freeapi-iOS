@@ -24,6 +24,7 @@
 @interface DetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong,nonatomic) NSDictionary *resultInfo;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *done;
 
 -(IBAction)donePressed:(id)sender;
 
