@@ -37,7 +37,7 @@
 @end
 
 @implementation DetailViewController
-@synthesize resultInfo,infoKeys,infoTitles,resultRequest;
+@synthesize resultInfo,infoKeys,infoTitles,resultRequest,done;
 
 #pragma mark - view lifecycle
 
@@ -45,6 +45,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    done.title = NSLocalizedString(@"DONE", nil);
+    
     infoKeys = INFO_DATAKEYS;
     infoTitles = INFO_TITLES;
 }
@@ -106,4 +109,8 @@
 }
 
 
+- (void)viewDidUnload {
+    [self setDone:nil];
+    [super viewDidUnload];
+}
 @end

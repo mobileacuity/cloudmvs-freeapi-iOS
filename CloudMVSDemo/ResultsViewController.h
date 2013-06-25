@@ -24,6 +24,7 @@
 @interface ResultsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *resultsView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *done;
 @property (strong,nonatomic) NSArray *results;
 
 //brings up the camera so that user can take another photograph

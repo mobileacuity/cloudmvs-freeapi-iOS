@@ -33,7 +33,7 @@
 @end
 
 @implementation SetupViewController
-@synthesize isLoadAuto,isAlreadySetup,datasetTextField,autoSwitch,scrollView,originalScrollViewFrame,cancel,save;
+@synthesize isLoadAuto,isAlreadySetup,datasetTextField,autoSwitch,scrollView,originalScrollViewFrame,cancel,save,labeltitle,labeldescription,labelswitch;
 
 #pragma mark - view lifecycle
 
@@ -66,6 +66,15 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     DLog(@"View did appear");
+    
+    // L10N
+    labeltitle.text = NSLocalizedString(@"CONFIGETITLE", nil);
+    labeldescription.text = NSLocalizedString(@"CONFIGDESCRIPTION", nil);
+    labelswitch.text = NSLocalizedString(@"AUTOFOLLOWLINKLABEL", nil);
+    
+    [cancel setTitle:NSLocalizedString(@"CANCEL", nil) forState:UIControlStateNormal];
+    [save setTitle:NSLocalizedString(@"SAVE", nil) forState:UIControlStateNormal];
+    
 	scrollView.contentSize = [self originalScrollFrame].size;
     [autoSwitch setOn:isLoadAuto];
     DLog(@"View appeareded");
@@ -148,6 +157,15 @@
         [cancel setEnabled:YES];
         [save setEnabled:YES];
         [self performSegueWithIdentifier: SEGUE_CAMERA sender:self];
+    } else {
+        // On first run, ff the textfield is prefilled in, just auto save and go on to next screen.
+        if (datasetTextField.text.length > 0) {
+            DLog(@"api id already set, going to next screen");
+            
+            isLoadAuto = true;
+            
+            [self savePressed:nil];
+        }
     }
 }
 

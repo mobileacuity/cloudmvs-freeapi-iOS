@@ -1,0 +1,42 @@
+//
+//  Localizable.strings
+//  CloudMVSDemo
+//
+//  Created by Brandon Skrtich on 6/24/13.
+//
+//  Copyright (c) 2013 Mobile Acuity Ltd. All rights reserved.
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//  http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//
+
+
+"ANALYZINGIMAGE"        = "Analyzing Image";
+"MATCHNOTFOUND"         = "Unable to find a match";
+"LOADING"               = "Loading";
+"CONFIGURESERVICE"      = "Configure Service";
+"OPENINSAFARI"          = "Open In Safari";
+"CANCEL"                = "Cancel";
+"SAVE"                  = "Save";
+"DONE"                  = "Done";
+"CONFIGURE"             = "Configure";
+"RECONFIGURE"           = "Reconfigure..";
+"DATASETNOTFOUNDLABEL"  = "Dataset not found on server.\nCheck customer and service settings in the configuration options.";
+"CONFIGETITLE"          = "Configure Service";
+"CONFIGDESCRIPTION"     = "Complete the Search API URL as displayed in your service settings screen on our website:";
+"AUTOFOLLOWLINKLABEL"   = "Automatically Follow Links";
+"OK"                    = "Ok";
+"NOMATCHFOUND"          = "No match found";
+"NOINTERNET"            = "Failed to connect to server.\nPlease check your internet connection.";
+"ERRORCONNECTING"       = "Error connecting to server. Please try again.";
+"FAILED"                = "Failed to reach website";
+"TRYAGAIN"              = "Try Again";

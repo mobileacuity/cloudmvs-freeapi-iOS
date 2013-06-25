@@ -25,6 +25,13 @@
 
 int main(int argc, char *argv[])
 {
+    // Force language of app here
+    // en - English
+    // es - Spanish
+    // fr - French
+    NSArray *langOrder = [NSArray arrayWithObjects:@"en", nil];
+    [[NSUserDefaults standardUserDefaults] setObject:langOrder forKey:@"AppleLanguages"];
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

@@ -23,9 +23,11 @@
 
 @interface WebViewController : UIViewController<UIWebViewDelegate,UIAlertViewDelegate>
 
-@property (weak,nonatomic) IBOutlet UIWebView *webview;
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
 
-@property (strong,nonatomic) NSURLRequest *request;
+@property (strong, nonatomic) NSURLRequest *request;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *done;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *open;
 
 -(IBAction)openInSafariPressed:(id)sender;
 

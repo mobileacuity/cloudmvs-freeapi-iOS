@@ -290,7 +290,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     DLog(@"Failed to get response : %@", [error localizedFailureReason]);
     //first file download to fail close all other connections and set state
     
-    UIAlertView *failed = [[UIAlertView alloc] initWithTitle:nil message:@"Failed to connect to server.\nPlease check your internet connection." delegate:self cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
+    UIAlertView *failed = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"NOINTERNET", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"TRYAGAIN", nil) otherButtonTitles:nil];
     [failed setTag:1];
     
     [self stopWaitForResponse];
@@ -303,7 +303,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     DLog(@"Failed to find dataset on server");
     
-    UIAlertView *failed = [[UIAlertView alloc] initWithTitle:nil message:@"Dataset not found on server.\nCheck customer and service settings in the configuration options." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Reconfigure..", nil];
+    UIAlertView *failed = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"DATASETNOTFOUNDLABEL", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"CANCEL", nil) otherButtonTitles:NSLocalizedString(@"RECONFIGURE", nil), nil];
     [failed setTag:2];
     
     [self stopWaitForResponse];
@@ -311,9 +311,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 }
 
 - (void)promptUnmatchedAndErrorOccured:(BOOL)isError{
-    NSString *msg = @"No match found.";
-    if(isError) msg = @"Error connecting to server. Please try again.";
-    UIAlertView *prompt = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    NSString *msg = NSLocalizedString(@"NOMATCHFOUND", nil);
+    if(isError) msg = NSLocalizedString(@"ERRORCONNECTING", nil);
+    UIAlertView *prompt = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     [prompt setTag:1];
     [prompt show];
 }
@@ -324,7 +324,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         return;
     }
     
-    downloading = [[UIAlertView alloc] initWithTitle:nil message:@"Analyzing Image.." delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+    downloading = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"ANALYZINGIMAGE", nil) delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     [downloading show];
     
     //add a loading indicator to the view
