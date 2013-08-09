@@ -10,7 +10,10 @@
 		770C1E4916D7A7F40031870E /* MAAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 770C1E4816D7A7F40031870E /* MAAuthHelper.m */; };
 		770C1E4D16D7BE5C0031870E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770C1E4C16D7BE5C0031870E /* SystemConfiguration.framework */; };
 		BC8675E176B64F4FB651336D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4028CC52445A09DDA680A /* libPods.a */; };
-		FA2634B61705E83B00DCAF3D /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2634B41705E83B00DCAF3D /* CameraOverlayView.m */; };
+		FA171DAA179580DF00E193C4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA171DA9179580DF00E193C4 /* CameraViewController.m */; };
+		FA171DAC17958C9900E193C4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA171DAB17958C9900E193C4 /* CoreMedia.framework */; };
+		FA171DAE17958CA100E193C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA171DAD17958CA100E193C4 /* AVFoundation.framework */; };
+		FA171DB017958CB800E193C4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA171DAF17958CB800E193C4 /* CoreVideo.framework */; };
 		FA40A53316B6C85500AAE317 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA40A53216B6C85500AAE317 /* SetupViewController.m */; };
 		FA59811E16B6854F0050566A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA59811D16B6854F0050566A /* UIKit.framework */; };
 		FA59812016B6854F0050566A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA59811F16B6854F0050566A /* Foundation.framework */; };
@@ -20,15 +23,11 @@
 		FA59812E16B6854F0050566A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59812D16B6854F0050566A /* AppDelegate.m */; };
 		FA59813716B6854F0050566A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59813516B6854F0050566A /* MainStoryboard.storyboard */; };
 		FA59813A16B6854F0050566A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59813916B6854F0050566A /* ResultsViewController.m */; };
-		FA59814716B685F80050566A /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59814516B685F80050566A /* CameraViewController.m */; };
+		FA59814716B685F80050566A /* VisualSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59814516B685F80050566A /* VisualSearchViewController.m */; };
 		FA59815A16B68F060050566A /* URLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59815916B68F060050566A /* URLConnection.m */; };
-		FA59817216B6942D0050566A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA59817116B6942D0050566A /* QuartzCore.framework */; };
 		FA59817416B694380050566A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA59817316B694380050566A /* MobileCoreServices.framework */; };
 		FA7D372717020679008D3807 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D372617020679008D3807 /* WebViewController.m */; };
 		FA7D372A1702074D008D3807 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D37291702074D008D3807 /* DetailViewController.m */; };
-		FAF7E7CE170D882200DE0CDA /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7E7C9170D882200DE0CDA /* UIImage+Alpha.m */; };
-		FAF7E7CF170D882200DE0CDA /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7E7CB170D882200DE0CDA /* UIImage+Resize.m */; };
-		FAF7E7D0170D882200DE0CDA /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7E7CD170D882200DE0CDA /* UIImage+RoundedCorner.m */; };
 		FAF7E7DC170D883E00DE0CDA /* CameraButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7D1170D883E00DE0CDA /* CameraButtonIcon.png */; };
 		FAF7E7DD170D883E00DE0CDA /* CameraLargeShutterButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7D2170D883E00DE0CDA /* CameraLargeShutterButtonPressed.png */; };
 		FAF7E7DE170D883E00DE0CDA /* CameraShutterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7D3170D883E00DE0CDA /* CameraShutterButton.png */; };
@@ -40,8 +39,6 @@
 		FAF7E7E4170D883E00DE0CDA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7D9170D883E00DE0CDA /* Icon.png */; };
 		FAF7E7E5170D883E00DE0CDA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7DA170D883E00DE0CDA /* Icon@2x.png */; };
 		FAF7E7E6170D883E00DE0CDA /* mobileacuity.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7DB170D883E00DE0CDA /* mobileacuity.png */; };
-		FAF7E7EB170D88DC00DE0CDA /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7E7170D88DC00DE0CDA /* CameraOverlayView.xib */; };
-		FAF7E7EC170D88DC00DE0CDA /* CameraOverlayView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF7E7E9170D88DC00DE0CDA /* CameraOverlayView5.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +48,11 @@
 		770C1E4A16D7B9200031870E /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		770C1E4C16D7BE5C0031870E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C76C2B40E51C4E0682BB8518 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		FA2634B31705E83B00DCAF3D /* CameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlayView.h; sourceTree = "<group>"; };
-		FA2634B41705E83B00DCAF3D /* CameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayView.m; sourceTree = "<group>"; };
+		FA171DA8179580DF00E193C4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		FA171DA9179580DF00E193C4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		FA171DAB17958C9900E193C4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FA171DAD17958CA100E193C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FA171DAF17958CB800E193C4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		FA40A53116B6C85500AAE317 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		FA40A53216B6C85500AAE317 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		FA59811916B6854F0050566A /* CloudMVSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudMVSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,22 +68,15 @@
 		FA59813616B6854F0050566A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FA59813816B6854F0050566A /* ResultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		FA59813916B6854F0050566A /* ResultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
-		FA59814416B685F80050566A /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		FA59814516B685F80050566A /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		FA59814416B685F80050566A /* VisualSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualSearchViewController.h; sourceTree = "<group>"; };
+		FA59814516B685F80050566A /* VisualSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualSearchViewController.m; sourceTree = "<group>"; };
 		FA59815816B68F060050566A /* URLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConnection.h; sourceTree = "<group>"; };
 		FA59815916B68F060050566A /* URLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConnection.m; sourceTree = "<group>"; };
-		FA59817116B6942D0050566A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FA59817316B694380050566A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FA7D372517020679008D3807 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		FA7D372617020679008D3807 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		FA7D37281702074D008D3807 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FA7D37291702074D008D3807 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		FAF7E7C8170D882200DE0CDA /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "CloudMVSDemo/ImageManipulation/UIImage+Alpha.h"; sourceTree = "<group>"; };
-		FAF7E7C9170D882200DE0CDA /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "CloudMVSDemo/ImageManipulation/UIImage+Alpha.m"; sourceTree = "<group>"; };
-		FAF7E7CA170D882200DE0CDA /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "CloudMVSDemo/ImageManipulation/UIImage+Resize.h"; sourceTree = "<group>"; };
-		FAF7E7CB170D882200DE0CDA /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "CloudMVSDemo/ImageManipulation/UIImage+Resize.m"; sourceTree = "<group>"; };
-		FAF7E7CC170D882200DE0CDA /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RoundedCorner.h"; path = "CloudMVSDemo/ImageManipulation/UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		FAF7E7CD170D882200DE0CDA /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "CloudMVSDemo/ImageManipulation/UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		FAF7E7D1170D883E00DE0CDA /* CameraButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CameraButtonIcon.png; path = graphics/CameraButtonIcon.png; sourceTree = "<group>"; };
 		FAF7E7D2170D883E00DE0CDA /* CameraLargeShutterButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CameraLargeShutterButtonPressed.png; path = graphics/CameraLargeShutterButtonPressed.png; sourceTree = "<group>"; };
 		FAF7E7D3170D883E00DE0CDA /* CameraShutterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CameraShutterButton.png; path = graphics/CameraShutterButton.png; sourceTree = "<group>"; };
@@ -95,8 +88,6 @@
 		FAF7E7D9170D883E00DE0CDA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = graphics/Icon.png; sourceTree = "<group>"; };
 		FAF7E7DA170D883E00DE0CDA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "graphics/Icon@2x.png"; sourceTree = "<group>"; };
 		FAF7E7DB170D883E00DE0CDA /* mobileacuity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mobileacuity.png; path = graphics/mobileacuity.png; sourceTree = "<group>"; };
-		FAF7E7E8170D88DC00DE0CDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CameraOverlayView.xib; sourceTree = "<group>"; };
-		FAF7E7EA170D88DC00DE0CDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CameraOverlayView5.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +95,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA171DB017958CB800E193C4 /* CoreVideo.framework in Frameworks */,
+				FA171DAE17958CA100E193C4 /* AVFoundation.framework in Frameworks */,
+				FA171DAC17958C9900E193C4 /* CoreMedia.framework in Frameworks */,
 				770C1E4D16D7BE5C0031870E /* SystemConfiguration.framework in Frameworks */,
 				FA59817416B694380050566A /* MobileCoreServices.framework in Frameworks */,
-				FA59817216B6942D0050566A /* QuartzCore.framework in Frameworks */,
 				FA59811E16B6854F0050566A /* UIKit.framework in Frameworks */,
 				FA59812016B6854F0050566A /* Foundation.framework in Frameworks */,
 				FA59812216B6854F0050566A /* CoreGraphics.framework in Frameworks */,
@@ -129,7 +122,6 @@
 		FA59810E16B6854F0050566A = {
 			isa = PBXGroup;
 			children = (
-				FA59814B16B68A730050566A /* ImageManipulation */,
 				FA59812316B6854F0050566A /* CloudMVSDemo */,
 				FA59811C16B6854F0050566A /* Frameworks */,
 				FA59811A16B6854F0050566A /* Products */,
@@ -148,10 +140,12 @@
 		FA59811C16B6854F0050566A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA171DAF17958CB800E193C4 /* CoreVideo.framework */,
+				FA171DAD17958CA100E193C4 /* AVFoundation.framework */,
+				FA171DAB17958C9900E193C4 /* CoreMedia.framework */,
 				770C1E4C16D7BE5C0031870E /* SystemConfiguration.framework */,
 				770C1E4A16D7B9200031870E /* libcommonCrypto.dylib */,
 				FA59817316B694380050566A /* MobileCoreServices.framework */,
-				FA59817116B6942D0050566A /* QuartzCore.framework */,
 				FA59811D16B6854F0050566A /* UIKit.framework */,
 				FA59811F16B6854F0050566A /* Foundation.framework */,
 				FA59812116B6854F0050566A /* CoreGraphics.framework */,
@@ -166,10 +160,10 @@
 				770C1E4616D7A7B30031870E /* AuthHelper */,
 				FA59812C16B6854F0050566A /* AppDelegate.h */,
 				FA59812D16B6854F0050566A /* AppDelegate.m */,
-				FA2634B31705E83B00DCAF3D /* CameraOverlayView.h */,
-				FA2634B41705E83B00DCAF3D /* CameraOverlayView.m */,
-				FA59814416B685F80050566A /* CameraViewController.h */,
-				FA59814516B685F80050566A /* CameraViewController.m */,
+				FA59814416B685F80050566A /* VisualSearchViewController.h */,
+				FA59814516B685F80050566A /* VisualSearchViewController.m */,
+				FA171DA8179580DF00E193C4 /* CameraViewController.h */,
+				FA171DA9179580DF00E193C4 /* CameraViewController.m */,
 				FA7D37281702074D008D3807 /* DetailViewController.h */,
 				FA7D37291702074D008D3807 /* DetailViewController.m */,
 				FA59813816B6854F0050566A /* ResultsViewController.h */,
@@ -181,8 +175,6 @@
 				FA7D372517020679008D3807 /* WebViewController.h */,
 				FA7D372617020679008D3807 /* WebViewController.m */,
 				FA59813516B6854F0050566A /* MainStoryboard.storyboard */,
-				FAF7E7E7170D88DC00DE0CDA /* CameraOverlayView.xib */,
-				FAF7E7E9170D88DC00DE0CDA /* CameraOverlayView5.xib */,
 				FA59812416B6854F0050566A /* Supporting Files */,
 			);
 			path = CloudMVSDemo;
@@ -208,19 +200,6 @@
 				FA59812B16B6854F0050566A /* CloudMVSDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FA59814B16B68A730050566A /* ImageManipulation */ = {
-			isa = PBXGroup;
-			children = (
-				FAF7E7C8170D882200DE0CDA /* UIImage+Alpha.h */,
-				FAF7E7C9170D882200DE0CDA /* UIImage+Alpha.m */,
-				FAF7E7CA170D882200DE0CDA /* UIImage+Resize.h */,
-				FAF7E7CB170D882200DE0CDA /* UIImage+Resize.m */,
-				FAF7E7CC170D882200DE0CDA /* UIImage+RoundedCorner.h */,
-				FAF7E7CD170D882200DE0CDA /* UIImage+RoundedCorner.m */,
-			);
-			name = ImageManipulation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +267,6 @@
 				FAF7E7E4170D883E00DE0CDA /* Icon.png in Resources */,
 				FAF7E7E5170D883E00DE0CDA /* Icon@2x.png in Resources */,
 				FAF7E7E6170D883E00DE0CDA /* mobileacuity.png in Resources */,
-				FAF7E7EB170D88DC00DE0CDA /* CameraOverlayView.xib in Resources */,
-				FAF7E7EC170D88DC00DE0CDA /* CameraOverlayView5.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,16 +297,13 @@
 				FA59812A16B6854F0050566A /* main.m in Sources */,
 				FA59812E16B6854F0050566A /* AppDelegate.m in Sources */,
 				FA59813A16B6854F0050566A /* ResultsViewController.m in Sources */,
-				FA59814716B685F80050566A /* CameraViewController.m in Sources */,
+				FA59814716B685F80050566A /* VisualSearchViewController.m in Sources */,
 				FA59815A16B68F060050566A /* URLConnection.m in Sources */,
 				FA40A53316B6C85500AAE317 /* SetupViewController.m in Sources */,
 				770C1E4916D7A7F40031870E /* MAAuthHelper.m in Sources */,
 				FA7D372717020679008D3807 /* WebViewController.m in Sources */,
 				FA7D372A1702074D008D3807 /* DetailViewController.m in Sources */,
-				FA2634B61705E83B00DCAF3D /* CameraOverlayView.m in Sources */,
-				FAF7E7CE170D882200DE0CDA /* UIImage+Alpha.m in Sources */,
-				FAF7E7CF170D882200DE0CDA /* UIImage+Resize.m in Sources */,
-				FAF7E7D0170D882200DE0CDA /* UIImage+RoundedCorner.m in Sources */,
+				FA171DAA179580DF00E193C4 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,22 +324,6 @@
 				FA59813616B6854F0050566A /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		FAF7E7E7170D88DC00DE0CDA /* CameraOverlayView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAF7E7E8170D88DC00DE0CDA /* en */,
-			);
-			name = CameraOverlayView.xib;
-			sourceTree = "<group>";
-		};
-		FAF7E7E9170D88DC00DE0CDA /* CameraOverlayView5.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAF7E7EA170D88DC00DE0CDA /* en */,
-			);
-			name = CameraOverlayView5.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -398,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C76C2B40E51C4E0682BB8518 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mobile Acuity Ltd. (TWPBRN98YF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CloudMVSDemo/CloudMVSDemo-Prefix.pch";
 				INFOPLIST_FILE = "CloudMVSDemo/CloudMVSDemo-Info.plist";
@@ -407,6 +366,7 @@
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C118DAF9-D88E-409A-8DA9-650C1CE491A5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad-Hoc";

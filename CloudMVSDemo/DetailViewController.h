@@ -21,6 +21,7 @@
 
 #import <UIKit/UIKit.h>
 
+//Class used to display a single image match result with associated data
 @interface DetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong,nonatomic) NSDictionary *resultInfo;

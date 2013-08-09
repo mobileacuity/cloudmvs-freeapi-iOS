@@ -27,13 +27,13 @@ typedef void (^URLConnectioDataReceivedBlock)       (NSData *data);
 
 @interface URLConnection : NSObject <NSURLConnectionDelegate>
 
-+ (id)asyncConnectionWithRequest:(NSURLRequest *)request
++(id)asyncConnectionWithRequest:(NSURLRequest *)request
                    completionBlock:(URLConnectionCompletionBlock)completionBlock
                         errorBlock:(URLConnectioErrorBlock)errorBlock
                             notFoundBlock:(URLConnectionNotFoundBlock)notFoundBlock
                                 dataBlock:(URLConnectioDataReceivedBlock)dataBlock;
 
 
-- (void)close;
+-(void)close;
 
 @end

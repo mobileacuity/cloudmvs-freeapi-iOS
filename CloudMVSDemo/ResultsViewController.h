@@ -21,13 +21,15 @@
 
 #import <UIKit/UIKit.h>
 
+//When multiple results are returned for an image, this class is used to display the top level of
+//results list
 @interface ResultsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *resultsView;
 @property (strong,nonatomic) NSArray *results;
 
-//brings up the camera so that user can take another photograph
-- (IBAction)donePresed:(id)sender;
+//Brings up the camera so that user can take another photo
+-(IBAction)donePresed:(id)sender;
 
 @end
 

@@ -54,18 +54,6 @@
     webview = nil;
 }
 
-/*-(void)pause{
-    DLog(@"webview pause");
-    [webview stopLoading];
-    [self stopWaitForResponse];
-}
-
--(void)resume{
-    DLog(@"webview resume");
-    if (completedLoad) return;
-    [webview loadRequest:request];
-}*/
-
 #pragma mark - UI events
 
 -(void)openInSafariPressed:(id)sender{

@@ -24,7 +24,6 @@
 
 #define INFO_TITLES [NSArray arrayWithObjects:@"Result",@"ID",@"Match score", @"Center", nil]
 #define INFO_DATAKEYS [NSArray arrayWithObjects:RESULT_NAME_DATAKEY, RESULT_ID_DATAKEY, RESULT_SCORE_DATAKEY, RESULT_CENTRE_DATAKEY, nil]
-#define SEGUE_WEB @"showWeb"
 
 
 @interface DetailViewController ()
@@ -39,12 +38,10 @@
 @implementation DetailViewController
 @synthesize resultInfo,infoKeys,infoTitles,resultRequest;
 
-#pragma mark - view lifecycle
+#pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     infoKeys = INFO_DATAKEYS;
     infoTitles = INFO_TITLES;
 }
@@ -54,6 +51,8 @@
 -(void)donePressed:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - App management
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     WebViewController *webview = (WebViewController*)[segue destinationViewController];

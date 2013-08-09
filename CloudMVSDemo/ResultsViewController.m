@@ -22,15 +22,12 @@
 #import "ResultsViewController.h"
 #import "DetailViewController.h"
 
-//segue identifiers
-#define SEGUE_DETAIL @"showDetailView"
 
 @interface ResultsViewController ()
 
 @property (strong,nonatomic) NSDictionary *expandedResult;
 
 @end
-
 
 @implementation ResultsViewController
 @synthesize resultsView,expandedResult,results;
@@ -39,7 +36,7 @@
 #pragma mark - UI events
 
 - (void)donePresed:(id)sender{
-    DLog(@"camera pressed");
+    DLog(@"Camera pressed");
     results = nil;
     [resultsView setDataSource:nil];
     [resultsView setDelegate:nil];
@@ -55,13 +52,11 @@
     int selectedRow = indexPath.row;
     expandedResult = [results objectAtIndex:selectedRow];
     [self performSegueWithIdentifier:SEGUE_DETAIL sender:self];
-    
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
@@ -84,13 +79,14 @@
     
     cell.textLabel.text = [result objectForKey:RESULT_NAME_DATAKEY];
     cell.detailTextLabel.text = [result objectForKey:RESULT_SCORE_DATAKEY];
-    // set the accessory view:
+    
+    // Set the accessory view:
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
-#pragma mark - app management
+#pragma mark - App management
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     DetailViewController *detailView = (DetailViewController*)[segue destinationViewController];

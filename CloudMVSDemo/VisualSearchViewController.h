@@ -1,5 +1,5 @@
 //
-//  CameraOverlayView.m
+//  CameraOverlayView.h
 //  CloudMVSDemo
 //
 //  Created by Aleksander Niedziolko on 28/01/2013.
@@ -19,21 +19,18 @@
 //  limitations under the License.
 //
 
-#import "CameraOverlayView.h"
+#import <UIKit/UIKit.h>
+#import "CameraViewController.h"
 
-@implementation CameraOverlayView
+@interface VisualSearchViewController : UIViewController <UINavigationControllerDelegate,CameraViewControllerDelegate>
 
-@synthesize delegate;
+@property (weak,nonatomic) IBOutlet UIImageView *imagePreview;
 
-- (IBAction)cameraPressed:(id)sender{
-    DLog(@"camera pressed");
-    [delegate cameraPressed];
-}
 
--(IBAction)configurationPressed:(id)sender{
-    DLog(@"back pressed");
-    [delegate configurationPressed];
-}
+-(void)cameraPressed;
 
+-(void)configurationPressed;
+
+-(void)imageTaken:(UIImage *)image;
 
 @end

@@ -56,3 +56,11 @@
 //user setting keys
 #define IS_AUTOLOAD_SETTING @"isAutoLoad"
 #define MA_DATASET_KEY @"MADataset"
+
+//segue ids
+#define SEGUE_AV_CAMERA_LAUNCH @"AVCamera"
+#define SEGUE_MULTIPLE @"showMultipleResults"
+#define SEGUE_DETAIL @"showDetailView"
+#define SEGUE_WEB @"showWeb"
+#define SEGUE_SINGLE @"showSingleResult"
+#define SEGUE_LIST @"showMultipleResults"

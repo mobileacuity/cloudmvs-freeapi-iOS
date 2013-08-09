@@ -29,7 +29,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancel;
 @property (weak, nonatomic) IBOutlet UIButton *save;
 
--(IBAction)responseToggled:(id)sender;
+//toggles follow links automatically option- if image match returns a link, displays website
+-(IBAction)followLinksToggled:(id)sender;
 
 -(IBAction)savePressed:(id)sender;
 

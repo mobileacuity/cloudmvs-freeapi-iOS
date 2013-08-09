@@ -20,7 +20,7 @@
 //
 
 #import "SetupViewController.h"
-#import "CameraViewController.h"
+#import "VisualSearchViewController.h"
 
 #define IS_SETUP_SETTING @"isSetUp"
 #define SEGUE_CAMERA @"launchCamera"
@@ -65,10 +65,8 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    DLog(@"View did appear");
 	scrollView.contentSize = [self originalScrollFrame].size;
     [autoSwitch setOn:isLoadAuto];
-    DLog(@"View appeareded");
 }
 
 - (void)viewDidUnload {
@@ -79,8 +77,7 @@
 
 #pragma mark - UI events
 
--(IBAction)responseToggled:(id)sender{
-    DLog(@"response toggled");
+-(IBAction)followLinksToggled:(id)sender{
     UISwitch *ctrl = (UISwitch*) sender;
     isLoadAuto = [ctrl isOn];
 }
@@ -102,12 +99,12 @@
 
 #pragma mark - UITextFieldDelegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {              // called when 'return' key pressed. return NO to ignore.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
 	[textField resignFirstResponder];
 	return NO;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField {           // became first responder
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
 	double delayInSeconds = 0.1;
 	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -116,8 +113,10 @@
 }
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    //limit characters to only those allowed in dataset name
     NSCharacterSet *base64 = [[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890+/\n "] invertedSet];
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    //only allow saving if dataset name entered
     if(newString.length>1){
         [save setEnabled:YES];
     }else{
@@ -131,7 +130,7 @@
     }
 }
 
-#pragma mark - app management
+#pragma mark - App management
 
 -(void)populateTextFields {
 	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
@@ -140,18 +139,19 @@
     [autoSwitch setOn:isLoadAuto];
 }
 
-- (void) initialize{
+- (void)initialize{
     DLog(@"Initializing app");
     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
     isAlreadySetup = [settings boolForKey : IS_SETUP_SETTING];
     if (isAlreadySetup){
+        //Not running app for the first time- run camera
         [cancel setEnabled:YES];
         [save setEnabled:YES];
         [self performSegueWithIdentifier: SEGUE_CAMERA sender:self];
     }
 }
 
-#pragma mark - keyboard behavior
+#pragma mark - Keyboard behavior
 
 -(CGRect)originalScrollFrame {
 	if (CGRectIsEmpty(originalScrollViewFrame)) {
